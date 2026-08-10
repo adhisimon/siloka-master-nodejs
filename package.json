@@ -1,0 +1,26 @@
+{
+  "name": "siloka-master-nodejs",
+  "version": "0.0.1",
+  "description": "SILOKA-MASTER (nodejs version)",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adhisimon/siloka-master-nodejs.git"
+  },
+  "keywords": [
+    "siloka",
+    "object-storage",
+    "s3",
+    "blob-storage",
+    "distributed-storage"
+  ],
+  "author": "Adhidarma Hadiwinoto <me@adhisimon.org>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/adhisimon/siloka-master-nodejs/issues"
+  },
+  "homepage": "https://github.com/adhisimon/siloka-master-nodejs#readme"
+}
