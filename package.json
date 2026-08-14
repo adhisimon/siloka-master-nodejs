@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/adhisimon/siloka-master-nodejs/issues"
   },
-  "homepage": "https://github.com/adhisimon/siloka-master-nodejs#readme"
+  "homepage": "https://github.com/adhisimon/siloka-master-nodejs#readme",
+  "dependencies": {
+    "mysql2": "^3.23.3"
+  }
 }
