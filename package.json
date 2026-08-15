@@ -25,7 +25,8 @@
   "homepage": "https://github.com/adhisimon/siloka-master-nodejs#readme",
   "dependencies": {
     "mysql2": "^3.23.3",
-    "pino": "^10.3.1"
+    "pino": "^10.3.1",
+    "umzug": "^3.8.3"
   },
   "devDependencies": {
     "pino-pretty": "^13.1.3",
