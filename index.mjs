@@ -4,6 +4,7 @@ import { pool } from './lib/db.mjs';
 import initClusterSchema from './lib/clusters/db-init.mjs';
 import { electionLoop } from './lib/clusters/elections.mjs';
 import { fullVersion } from './lib/version.mjs';
+import { startServer } from './lib/apiserver/server.mjs';
 
 const module = 'MAIN';
 
@@ -24,3 +25,5 @@ electionLoop(
   Number(process.env.SILOKA_MASTER_LEADER_TTL_SECS) || undefined,
   Number(process.env.SILOKA_MASTER_ELECTION_INTERVAL_MS) || undefined
 );
+
+startServer();
