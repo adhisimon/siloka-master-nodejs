@@ -6,6 +6,7 @@ import { electionLoop } from './lib/clusters/elections.mjs';
 import { fullVersion } from './lib/version.mjs';
 import { startServer } from './lib/apiserver/server.mjs';
 import { startHeartbeatLoop } from './lib/clusters/heartbeat-clients.mjs';
+import { setupGracefulShutdown } from './lib/shutdown.mjs';
 
 const module = 'MAIN';
 
@@ -27,5 +28,7 @@ electionLoop(
   Number(process.env.SILOKA_MASTER_ELECTION_INTERVAL_MS) || undefined
 );
 
-startServer();
+const fastify = await startServer();
+
+setupGracefulShutdown(fastify, publishAddress);
 startHeartbeatLoop();
