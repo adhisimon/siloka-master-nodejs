@@ -7,6 +7,9 @@ import { fullVersion } from './lib/version.mjs';
 import { startServer } from './lib/apiserver/server.mjs';
 import { startHeartbeatLoop } from './lib/clusters/heartbeat-clients.mjs';
 import { setupGracefulShutdown } from './lib/shutdown.mjs';
+import { parseCliArgs } from './lib/cli.mjs';
+
+parseCliArgs();
 
 const module = 'MAIN';
 
