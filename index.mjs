@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import logger from './lib/logger.mjs';
+import logger, { configureLogger } from './lib/logger.mjs';
 import { pool } from './lib/db.mjs';
 import initClusterSchema from './lib/clusters/db-init.mjs';
 import { electionLoop } from './lib/clusters/elections.mjs';
@@ -9,7 +9,8 @@ import { startHeartbeatLoop } from './lib/clusters/heartbeat-clients.mjs';
 import { setupGracefulShutdown } from './lib/shutdown.mjs';
 import { parseCliArgs } from './lib/cli.mjs';
 
-parseCliArgs();
+const cliArgs = parseCliArgs();
+configureLogger(cliArgs);
 
 const module = 'MAIN';
 
