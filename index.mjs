@@ -5,6 +5,7 @@ import initClusterSchema from './lib/clusters/db-init.mjs';
 import { electionLoop } from './lib/clusters/elections.mjs';
 import { fullVersion } from './lib/version.mjs';
 import { startServer } from './lib/apiserver/server.mjs';
+import { startHeartbeatLoop } from './lib/clusters/heartbeat-clients.mjs';
 
 const module = 'MAIN';
 
@@ -27,3 +28,4 @@ electionLoop(
 );
 
 startServer();
+startHeartbeatLoop();
